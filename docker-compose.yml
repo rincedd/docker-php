@@ -1,0 +1,16 @@
+php:
+  build: ./php
+  links:
+    - redis
+  volumes:
+    - /home/gerd/workspace/symfony:/usr/share/nginx/html
+redis:
+  image: redis:2.8
+nginx:
+  build: ./nginx
+  links:
+    - php:php-fpm
+  ports:
+    - "80:80"
+  volumes:
+    - /home/gerd/workspace/symfony:/usr/share/nginx/html
