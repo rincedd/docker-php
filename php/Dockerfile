@@ -17,6 +17,6 @@ RUN apt-get purge -y libbz2-dev libicu-dev libxml2-dev build-essential zlib1g-de
 
 ADD php.ini /usr/local/etc/php/php.ini
 
-VOLUME ["/usr/share/nginx/html"]
+VOLUME ["/var/www/html"]
 
 CMD ["php-fpm"]

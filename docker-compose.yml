@@ -3,7 +3,7 @@ php:
   links:
     - redis
   volumes:
-    - /home/gerd/workspace/symfony:/usr/share/nginx/html
+    - ../symfony:/var/www/html
 redis:
   image: redis:2.8
 nginx:
@@ -13,4 +13,4 @@ nginx:
   ports:
     - "80:80"
   volumes:
-    - /home/gerd/workspace/symfony:/usr/share/nginx/html
+    - ../symfony:/var/www/html
